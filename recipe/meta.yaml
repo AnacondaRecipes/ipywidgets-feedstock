@@ -10,7 +10,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  noarch: python
+  noarch: {{ noarch_python }}
   number: 0
   script: python -m pip install --no-deps .
 
