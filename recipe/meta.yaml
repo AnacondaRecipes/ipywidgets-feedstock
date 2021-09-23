@@ -18,6 +18,8 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
+    - wheel
   run:
     - python
     - ipython >=4.0.0
@@ -31,6 +33,10 @@ requirements:
 test:
   imports:
     - ipywidgets
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/ipython/ipywidgets
