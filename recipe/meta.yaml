@@ -1,5 +1,5 @@
-{% set version = "7.6.3" %}
-{% set sha256 = "9f1a43e620530f9e570e4a493677d25f08310118d315b00e25a18f12913c41f0" %}
+{% set version = "7.6.4" %}
+{% set sha256 = "028bf014a0b1d77cb676fe163115f145aacdde0bb9a51c4166940e5b62a7d1d0" %}
 
 package:
   name: ipywidgets
@@ -11,13 +11,15 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - python
     - pip
+    - setuptools
+    - wheel
   run:
     - python
     - ipython >=4.0.0
@@ -26,10 +28,15 @@ requirements:
     - nbformat >=4.2.0
     - widgetsnbextension >=3.5.0,<3.6.0
     - jupyterlab_widgets >=1.0.0
+    - ipython_genutils >=0.2.0,<0.3.0
 
 test:
   imports:
     - ipywidgets
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/ipython/ipywidgets
@@ -40,6 +47,7 @@ about:
   description: |
     ipywidgets are interactive HTML widgets for Jupyter notebooks and the IPython kernel.
   doc_url: https://ipywidgets.readthedocs.io/en/latest/
+  dev_url: https://github.com/ipython/ipywidgets
   doc_source_url: https://github.com/jupyter-widgets/ipywidgets/blob/master/docs/source/index.rst
 
 extra:
