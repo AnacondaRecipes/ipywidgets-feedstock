@@ -11,13 +11,15 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - python
     - pip
+    - setuptools
+    - wheel
   run:
     - python >=3.6
     - ipython >=4.0.0
@@ -26,6 +28,7 @@ requirements:
     - nbformat >=4.2.0
     - widgetsnbextension >=3.5.0,<3.6.0
     - jupyterlab_widgets >=1.0.0
+    - ipython_genutils >=0.2.0,<0.3.0
 
 test:
   imports:
@@ -45,6 +48,7 @@ about:
   description: |
     ipywidgets are interactive HTML widgets for Jupyter notebooks and the IPython kernel.
   doc_url: https://ipywidgets.readthedocs.io/en/latest/
+  dev_url: https://github.com/ipython/ipywidgets
   doc_source_url: https://github.com/jupyter-widgets/ipywidgets/blob/master/docs/source/index.rst
   dev_url: https://github.com/ipython/ipywidgets
 
