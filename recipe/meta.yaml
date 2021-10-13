@@ -19,7 +19,7 @@ requirements:
     - python
     - pip
   run:
-    - python
+    - python >=3.6
     - ipython >=4.0.0
     - ipykernel >=4.5.1
     - traitlets >=4.3.1,<6.0.0
@@ -30,6 +30,11 @@ requirements:
 test:
   imports:
     - ipywidgets
+  requires:
+    - pip
+    - python <3.10
+  commands:
+    - pip check
 
 about:
   home: https://github.com/ipython/ipywidgets
@@ -41,6 +46,7 @@ about:
     ipywidgets are interactive HTML widgets for Jupyter notebooks and the IPython kernel.
   doc_url: https://ipywidgets.readthedocs.io/en/latest/
   doc_source_url: https://github.com/jupyter-widgets/ipywidgets/blob/master/docs/source/index.rst
+  dev_url: https://github.com/ipython/ipywidgets
 
 extra:
   recipe-maintainers:
