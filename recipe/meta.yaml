@@ -11,17 +11,17 @@ source:
 
 build:
   noarch: python
-  number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 2
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python
+    - python >=3.6,<3.12
     - pip
     - setuptools
     - wheel
   run:
-    - python >=3.6
+    - python >=3.6,<3.12
     - ipython >=4.0.0
     - ipykernel >=4.5.1
     - traitlets >=4.3.1,<6.0.0
@@ -35,7 +35,7 @@ test:
     - ipywidgets
   requires:
     - pip
-    - python <3.10
+    - python
   commands:
     - pip check
 
