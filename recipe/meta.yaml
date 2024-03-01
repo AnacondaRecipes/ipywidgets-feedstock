@@ -42,7 +42,7 @@ test:
     - pytest -vv --pyargs ipywidgets 
 
 about:
-  home: https://github.com/jupyter-widgets/ipywidgets
+  home: https://jupyter.org
   license: BSD-3-Clause
   license_file: LICENSE
   license_family: BSD
