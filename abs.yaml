@@ -1,4 +1,0 @@
-channels:
-  - https://staging.continuum.io/prefect/fs/comm-feedstock/pr2/e9a22bc
-  - https://staging.continuum.io/prefect/fs/widgetsnbextension-feedstock/pr11/ed2510b
-  - https://staging.continuum.io/prefect/fs/jupyterlab_widgets-feedstock/pr5/427d9e1
