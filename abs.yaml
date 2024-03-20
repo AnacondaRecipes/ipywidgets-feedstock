@@ -1,1 +1,4 @@
 aggregate_check: false
+
+channels:
+  - https://staging.continuum.io/prefect/fs/widgetsnbextension-feedstock/pr12/b57809c
