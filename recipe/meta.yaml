@@ -11,7 +11,8 @@ source:
 
 build:
   number: 0
-  skip: True  # [py<37 or s390x]
+  # trigger 1
+  skip: True  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
