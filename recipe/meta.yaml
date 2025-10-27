@@ -43,7 +43,7 @@ test:
     - jsonschema
     - ipykernel
     - pip
-    - pytest
+    - pytest >=3.6.0
     - pytz
 
 about:
