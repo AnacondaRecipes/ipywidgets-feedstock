@@ -1,5 +1,5 @@
 {% set name = "ipywidgets" %}
-{% set version = "8.1.7" %}
+{% set version = "8.1.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 15f1ac050b9ccbefd45dccfbb2ef6bed0029d8278682d569d71b8dd96bee0376
+  sha256: bcccba38a6ec3253f7a39c943cea5b9ad01999ce071396171adbc51c6a6a8613
 
 build:
-  number: 1
-  skip: True  # [py<37]
+  number: 0
+  skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
